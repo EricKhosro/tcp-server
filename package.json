@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "license": "ISC",
+  "scripts": {
+    "start:ts": "tsc -w",
+    "start:js": "nodemon ./dist/server.js",
+    "start": "concurrently npm:start:*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

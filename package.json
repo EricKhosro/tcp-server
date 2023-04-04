@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,6 +11,7 @@
     "start": "concurrently npm:start:*"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "nodemon": "^2.0.22",
     "typescript": "^5.0.2"
   },

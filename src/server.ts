@@ -1,13 +1,13 @@
 import net from "net";
-import MethodFactory from "./methodFactory";
+import MethodFactory from "./methodFactory.js";
 
 const server = net.createServer((socket: any) => {
   console.log("Client connected");
 
   const newRequestHandler = (methodName: string, reqBody: any) => {
-    // const methodFactory = new MethodFactory(methodName);
-    // const methodClass = methodFactory.createClass();
-    // methodClass?.methodHandler(reqBody);
+    const methodFactory = new MethodFactory(methodName);
+    const methodClass = methodFactory.createClass();
+    methodClass?.methodHandler(reqBody);
   };
 
   socket.on("data", (data: Buffer) => {

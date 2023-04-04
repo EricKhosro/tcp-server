@@ -1,4 +1,4 @@
-import { users } from "./db";
+import { users } from "./db.js";
 import { ILoginData, IMethodClass, IPacket } from "./interfaces/interfaces";
 
 export class Login implements IMethodClass<ILoginData> {
